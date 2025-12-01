@@ -16,15 +16,19 @@ body {
 #header {
     width: 100%;
     height: 100vh;
+    margin-top: -56;
     background-size: cover;
     background-position: center;
     overflow: hidden; /* Add this line to hide overflow content */
 }
 
 img {
+    
     float: right;
-    width: 70%;
+    width: 35%;
     height: 95vh;
+    margin-right: 175px;
+    
 }
 
 .name {
@@ -42,12 +46,15 @@ b {
 
 .container {
     padding: 10px 10%;
+    
 }
 nav{
     align-items: center;
     justify-content: center;
     justify-content: center;
+    float: right;
     display: flex;
+    margin-right: -90px;
 }
 
 
@@ -58,7 +65,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 5px 30px;
+    margin: 2px 20px;
     
 }
 
@@ -87,20 +94,35 @@ nav ul li a:hover::after {
     transform-origin: bottom left;
     transform: scalex(1);
 }
+#header img {
+    margin-top: 70px; /* adjust here */
+    
+}
+
 
 .header-text {
     font-size: 20px;
-    margin-top: 20%;
+    margin-top: 12%;
     margin-left: 50px;
+    
+    
 }
 
-.header-text h2 {
-    font-size: 40px;
-    margin-top: 20px;
+
+
+.header-text p {
+    /* font-size: 40px; */
+    margin-top: 10px;
 }
 
-.header-text h2 span {
+.header-text p span {
     color: #ff004f;
+}
+
+h1{
+    margin-left: 51px;
+    margin-bottom: -40px;
+    margin-top: 20px;
 }
 
 /* About Section */
@@ -108,6 +130,7 @@ nav ul li a:hover::after {
 #about {
     padding: 80px 0;
     color: #ababab;
+
 }
 
 .row {
@@ -118,28 +141,35 @@ nav ul li a:hover::after {
 
 .about-col-1 {
     flex-basis: 35%;
+    margin-left: 170px;
 }
 
 .about-col-1 img {
+    margin-top: px;
     border-radius: 10px;
     width: 100%; /* Set image width to 100% */
     height: auto; /* Allow image height to adjust automatically */
+    
 }
 
 .sub-title {
     font-size: 24px;
     margin-top: -10px; /* Adjust as needed */
     width: 100%;
+    color: white;
+    padding-bottom: 50px;
+    margin-left: auto;
 }
 
 .par {
     max-width: 430px;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .tab-tiitles {
     display: flex;
     margin: 20px 0 40px;
+    color: white;
 }
 
 .tab-links {
@@ -233,15 +263,17 @@ nav ul li a:hover::after {
     position: relative;
     overflow: hidden;
 }
-.work.img{
+.work img {
     width: 100%;
-    /* height: 100vh; */
+    height: 250px; /* or any max height you want */
+    object-fit: cover; /* this ensures the image fills the box without distortion */
     border-radius: 10px;
     display: block;
-    transition: transform(0.5s);
+    transition: transform 0.5s;
 }
+
 .layer{
-    width:100%;
+    width:54%;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
     border-radius: 10px;
