@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <h2>Sign In into your account</h2>
+    <div class="container">
+        <form id="form"> <!-- Added id="form" here -->
+            <div class="form-control"> 
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="enter your email" id="email">
+            </div>
+
+            <div class="form-control"> 
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="enter your password" id="password">
+                <small>Error message</small>
+            </div>
+            <button type="submit">Login</button> <!-- Changed id to type="submit" -->
+        </form>
+    </div>
+    <div id="error"></div> <!-- Added a div to display error messages -->
+    <script>
+        // JavaScript code here
+        const form = document.getElementById("form");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    if (validateForm()) {
+        const userData = getUserData();
+        const enteredEmail = email.value.trim();
+        const enteredPassword = password.value.trim();
+
+        if (userData && userData.email === enteredEmail && userData.password === enteredPassword) {
+            // Authentication successful, redirect to index.html
+            window.location.href = "index.html";
+        } else {
+            // Invalid credentials
+            showError("Invalid email or password");
+        }
+    }
+});
+
+function validateForm() {
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+
+    if (emailValue === "") {
+        showError("Email is required");
+        return false;
+    } else if (!isValidEmail(emailValue)) {
+        showError("Email is not valid");
+        return false;
+    }
+
+    if (passwordValue === "") {
+        showError("Password is required");
+        return false;
+    }
+
+    return true;
+}
+
+function showError(message) {
+    const errorDiv = document.getElementById("error");
+    errorDiv.innerText = message;
+}
+
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+function getUserData() {
+    // Retrieve user data from localStorage
+    const userDataJSON = localStorage.getItem("userData");
+    return userDataJSON ? JSON.parse(userDataJSON) : null;
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> website personnal portfolio blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/64afa46444.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 class="name"> <b>R</b>ichard .</h1>
+    <div id="header">
+        
+        <div class="container">
+            
+            <nav>
+                
+                <ul id="sidemenu"> 
+                    
+                    <li class="list"> <a href="#header">Home </a></li>
+                    <li class="list"> <a href="#about">About </a></li>
+                    <li class="list"> <a href="#services">Services </a></li>
+                    <li class="list"> <a href="#portifolio">portfolio </a></li>
+                    <li class="list"> <a href="#contact">contact </a></li>
+                    <li class="list"><a href="signin.html">Login</a></li>
+                    <li class="list"><a href="signup.html">Sign Up</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i> <!-- Changed from fa-solid fa-circle-xmark -->
+                    
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i> <!-- Changed from fa-solid fa-bars -->
+            </nav>
+            
+        </div>
+        <img src="../image/riny-removebg-preview.png">
+        <div class="header-text">
+            <p>Software Developer</p>
+            <h2>Hi I'm <span>Richard</span><br> from Rwanda</h2>
+        </div>
+    </div>
+<!-----.about----------------------->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="../image/ri.jpg" class="about">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="par">IT and Software Developer with experience in
+technical and customer support, troubleshooting,
+and system maintenance. Skilled in Microsoft 365,
+Google Workspace, Azure, AWS, and network
+management. Completed a Bachelor’s degree in
+Computer Science and trained through the
+Code2Connect program at Solvit Africa. Strong
+problem-solver with hands-on IT skills, customer
+focus, and readiness to grow as a Technical
+Support Engineer (SCIM)..</p>
+
+                     <div class="tab-tiitles">
+                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience',event)">Experience</p>
+                        <p class="tab-links" onclick="opentab('education', event)">Education</p>
+                     </div>
+                     <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>fullstack</span><br> building website</li>
+                            <li><span>Data analysis</span> <br>Analysing data and data visualisation</li>
+                        </ul>
+                     </div>
+                     <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>CMU AFRICA</span><br> I.O.T AI based system</li>
+                            
+                        </ul>
+                     </div>
+                     <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>2017-2019</span><br> E.S.KANOMBE/EFOTEC</li>
+                            <li><span>2021-CURRENT</span> <br> COMPUTER SCIENCE AT UNIVERSITY OF RWANDA</li>
+                        </ul>
+                     </div>
+                </div>
+ 
+            </div>
+        </div>
+    </div>
+   <!--------------services--------------------------->
+   <div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p class="ptext ">Identify Trends and Patterns: By analyzing transactional data over time, I could identify emerging trends, 
+                    patterns, and anomalies within and across industries <span class="dots">...</span> <span class="moreText"> Understanding consumer behavior,
+                    spending patterns, and market dynamics could provide valuable insights for 
+                    businesses to adapt their strategies and offerings accordingly.</span></p>
+                <button class="readMoreBtn">Learn More</button>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop-simple"></i>
+                <h2>UI/Ux Design</h2>
+                <p class="ptext">Predict Market Trends: Leveraging machine learning algorithms<span class="dots">...</span> <span class="moreText"> and predictive modeling techniques, 
+                    I could develop models to forecast future market trends, customer preferences, 
+                    and economic indicators.</span></p>
+                <button class="readMoreBtn">Learn More</button>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store"></i>
+                <h2>Mobile App</h2>
+                <p class="ptext">Optimize Marketing and Customer Experience: Analyzing transactional data alongside demographic, 
+                    behavioral,<span class="dots">...</span> <span class="moreText"> and psychographic information could enable businesses to personalize marketing campaigns, 
+                     enhance customer segmentation strategies, and improve overall customer experience.</span> </p>
+                <button class="readMoreBtn">Learn More</button>
+            </div>
+        </div>
+    </div>
+
+   </div>
+   <!----------------------portifolio------------------------------->
+   <div id="portifolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="../image/app3.jpg" alt="nor working">
+                <div class="layer">
+                    <h3>Social Media App</h3>
+                    <p>A mobile application (also called a mobile app)
+                        dowload it from google player store. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>    
+                </div>
+            </div>
+            <div class="work">
+                <img src="../image/app3.jpg" alt="not working">
+                <div class="layer">
+                    <h3>Music App</h3>
+                    <p>A mobile application (also called a mobile app)
+                        dowload it from google player store. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>    
+                </div>
+            </div>
+            <div class="work">
+                <img src="../image/app3.jpg" alt="not working">
+                <div class="layer">
+                    <h3>Online Shopping App</h3>
+                    <p>A mobile application (also called a mobile app)
+                        dowload it from google player store. </p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>    
+                </div>
+            </div>
+        </div>
+        <a class="btn" href="#">See More</a>
+    </div>
+   </div>
+   <!-----------------Contact info------------->
+   <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>0785043052</p>
+                    <div class="social-icons">
+                         <a href="http://facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+                         <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                         <a href=""><i class="fa-brands fa-instagram"></i></a>
+                         <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="image/NSANZIMANA Richardcv.docx" class="btn btn2" download>Download CV</a>
+
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="email" required>
+                        <textarea name="message" rows="6"placeholder="your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright Richard. Made with <i class="fa-solid fa-heart"></i> by Easy Tutorials</p>
+        </div>
+
+   </div>
+
+
+
+    <script src="../js/index.js"></script>
+
+
+</body>
+</html>
